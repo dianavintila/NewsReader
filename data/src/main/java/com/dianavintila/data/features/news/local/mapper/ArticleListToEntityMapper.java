@@ -16,10 +16,10 @@ public class ArticleListToEntityMapper implements Function<List<Article>, List<A
     public List<ArticleEntity> apply(List<Article> articles) {
         List<ArticleEntity> articleEntities = new ArrayList<>();
         for (Article currentArticle : articles) {
-            ArticleEntity entity = new ArticleEntity();
-            entity.setTitle(!currentArticle.title.equals("") ? currentArticle.title : DEFAULT_TITLE);
-            entity.setContent(!currentArticle.content.equals("") ? currentArticle.content : DEFAULT_CONTENT);
-            entity.setUrlImage(!currentArticle.imageUrl.equals("")? currentArticle.title : DEFAULT_URL);
+            String title = !currentArticle.title.equals("") ? currentArticle.title : DEFAULT_TITLE;
+            String content = !currentArticle.content.equals("") ? currentArticle.content : DEFAULT_CONTENT;
+            String urlImage = !currentArticle.imageUrl.equals("")? currentArticle.title : DEFAULT_URL;
+            ArticleEntity entity = new ArticleEntity(title,content,urlImage);
             articleEntities.add(entity);
         }
 

@@ -12,7 +12,7 @@ public class ArticleEntityToListMapper implements Function<List<ArticleEntity>, 
     public List<Article> apply(@NotNull List<ArticleEntity> articleEntities) throws Exception {
         List<Article> articleList = new ArrayList<>();
         for (ArticleEntity current : articleEntities) {
-            Article article = new Article(current.getUrlImage(), current.getTitle(), current.getContent(), "");
+            Article article = new Article(current.urlImage, current.title, current.content, "");
             articleList.add(article);
         }
         return articleList;

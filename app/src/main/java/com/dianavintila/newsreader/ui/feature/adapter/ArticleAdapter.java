@@ -33,9 +33,9 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ArticleI
 
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(holder.itemView.getContext(), NewsItemDetailsActivity.class);
-            intent.putExtra(NewsItemDetailsActivity.TITLE, articleModeList.get(position).Title);
-            intent.putExtra(NewsItemDetailsActivity.CONTENT, articleModeList.get(position).Content);
-            intent.putExtra(NewsItemDetailsActivity.URL, articleModeList.get(position).URLImage);
+            NewsItemDetailsActivity.TITLE = articleModeList.get(position).Title;
+            NewsItemDetailsActivity.CONTENT = articleModeList.get(position).Content;
+            NewsItemDetailsActivity.URL = articleModeList.get(position).URLImage;
             holder.itemView.getContext().startActivity(intent);
         });
 

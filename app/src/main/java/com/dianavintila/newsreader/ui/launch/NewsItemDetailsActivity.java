@@ -8,9 +8,9 @@ import com.dianavintila.newsreader.databinding.NewsDetailsBinding;
 import com.squareup.picasso.Picasso;
 
 public class NewsItemDetailsActivity extends AppCompatActivity {
-    public static final String TITLE = "TITLE";
-    public static final String CONTENT = "CONTENT";
-    public static final String URL = "http://jobportico.com/assets/front_end/images/no-image-found.jpg";
+    public static  String TITLE = "TITLE";
+    public static  String CONTENT = "CONTENT";
+    public static  String URL = "http://jobportico.com/assets/front_end/images/no-image-found.jpg";
 
 
     @Override

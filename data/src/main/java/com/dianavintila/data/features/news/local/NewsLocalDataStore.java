@@ -8,13 +8,17 @@ import io.reactivex.Single;
 import io.reactivex.schedulers.Schedulers;
 
 public class NewsLocalDataStore {
+
     private final ArticlesDAO dao;
+
     public NewsLocalDataStore(ArticlesDAO dao) {
         this.dao = dao;
     }
+
     public Single<List<ArticleEntity>> getArticlesList() {
         return dao.queryArticles();
     }
+
     public Completable insert(ArticleEntity article) {
         return dao.insertArticle(article);
     }
@@ -23,9 +27,7 @@ public class NewsLocalDataStore {
         return getArticlesList().map(new ArticleEntityToListMapper());
     }
 
-
     public void saveArticles(List<Article> articles) {
-
         dao.deleteAllArticles()
                 .andThen(
                         Single.just(articles)
@@ -34,4 +36,5 @@ public class NewsLocalDataStore {
                 ).subscribeOn(Schedulers.io())
                 .subscribe();
     }
+
 }

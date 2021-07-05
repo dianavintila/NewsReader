@@ -17,7 +17,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.launch.NewsItemDetails"/>
+        <activity android:name=".ui.launch.NewsItemDetailsActivity"/>
 
         <meta-data
             android:name="preloaded_fonts"

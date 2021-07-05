@@ -4,7 +4,7 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-import com.dianavintila.newsreader.ui.launch.NewsItemDetails;
+import com.dianavintila.newsreader.ui.launch.NewsItemDetailsActivity;
 import com.dianavintila.newsreader.databinding.NewsItemBinding;
 import com.dianavintila.newsreader.ui.feature.model.ArticleItemViewModel;
 import org.jetbrains.annotations.NotNull;
@@ -14,9 +14,6 @@ import java.util.List;
 public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ArticleItemViewHolder> {
 
     private List<ArticleItemViewModel> articleModeList;
-    public static final String TITLE = "titlu";
-    public static final String CONTENT = "content";
-    public static final String URL = "http://jobportico.com/assets/front_end/images/no-image-found.jpg";
 
     public ArticleAdapter() {
         this.articleModeList = new ArrayList<>();
@@ -35,10 +32,10 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ArticleI
         holder.binding.setViewModel(articleModeList.get(position));
 
         holder.itemView.setOnClickListener(v -> {
-            Intent intent = new Intent(holder.itemView.getContext(), NewsItemDetails.class);
-            intent.putExtra(TITLE, articleModeList.get(position).Title);
-            intent.putExtra(CONTENT, articleModeList.get(position).Content);
-            intent.putExtra(URL, articleModeList.get(position).URLImage);
+            Intent intent = new Intent(holder.itemView.getContext(), NewsItemDetailsActivity.class);
+            intent.putExtra(NewsItemDetailsActivity.TITLE, articleModeList.get(position).Title);
+            intent.putExtra(NewsItemDetailsActivity.CONTENT, articleModeList.get(position).Content);
+            intent.putExtra(NewsItemDetailsActivity.URL, articleModeList.get(position).URLImage);
             holder.itemView.getContext().startActivity(intent);
         });
 

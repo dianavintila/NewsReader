@@ -1,12 +1,10 @@
 package com.dianavintila.newsreader;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+import com.dianavintila.newsreader.ui.feature.fragment.NewsListFragment;
 
-import com.dianavintila.newsreader.ui.main.MainFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class NewsReaderActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.main_activity);
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.container, MainFragment.newInstance())
+                    .replace(R.id.container, NewsListFragment.newInstance())
                     .commitNow();
         }
     }

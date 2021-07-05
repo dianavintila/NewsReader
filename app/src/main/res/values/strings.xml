@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">NewsReader</string>
+    <string name="app_name">News Reader</string>
+    <string name="powered_by_newsapi_org">Powered by NewsAPI.org</string>
+    <string name="news_reader">News Reader</string>
+    <string name="by_vintila_diana_georgiana">by Vintila Diana-Georgiana</string>
+    <string name="by_vintila_diana">by Vintila Diana</string>
+    <string name="network_error">Something went wrong, are you connected? debug: %s</string>
+    <string name="results">Received %d results</string>
+    <string name="ok">Ok</string>
+    <string name="error_title">Oops</string>
 </resources>

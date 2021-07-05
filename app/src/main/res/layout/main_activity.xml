@@ -4,4 +4,13 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity" />
+    tools:context=".NewsReaderActivity">
+
+
+    <fragment
+        android:name="com.dianavintila.newsreader.ui.feature.fragment.NewsListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</FrameLayout>

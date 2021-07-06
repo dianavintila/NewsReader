@@ -10,13 +10,14 @@ import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleObserver;
 import androidx.lifecycle.OnLifecycleEvent;
 import com.dianavintila.data.repository.NewsRepository;
+import com.dianavintila.newsreader.ui.feature.listener.ArticleHandler;
 import com.dianavintila.newsreader.ui.feature.model.mapper.ArticlesToVmListMapper;
 import com.dianavintila.newsreader.ui.feature.reactive.SingleLiveEvent;
 import java.util.List;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 
-public class NewsListViewModel extends AndroidViewModel implements LifecycleObserver {
+public class NewsListViewModel extends AndroidViewModel implements LifecycleObserver, ArticleHandler {
 
     private final static String LINK = "https://newsapi.org/";
     private final NewsRepository repo;
@@ -71,5 +72,10 @@ public class NewsListViewModel extends AndroidViewModel implements LifecycleObse
         if (disposable != null) {
             disposable.dispose();
         }
+    }
+
+    @Override
+    public void onItemSelected(ArticleItemViewModel item) {
+
     }
 }

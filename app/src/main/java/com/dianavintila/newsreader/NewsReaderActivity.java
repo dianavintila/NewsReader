@@ -3,7 +3,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.dianavintila.newsreader.ui.feature.fragment.NewsListFragment;
 
-
 public class NewsReaderActivity extends AppCompatActivity {
 
     @Override

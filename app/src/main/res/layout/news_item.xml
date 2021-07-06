@@ -7,6 +7,11 @@
         <variable
             name="viewModel"
             type="com.dianavintila.newsreader.ui.feature.model.ArticleItemViewModel" />
+
+        <variable
+            name="handler"
+            type="com.dianavintila.newsreader.ui.feature.listener.ArticleHandler" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -60,9 +65,10 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginBottom="16dp"
                 android:ellipsize="end"
-                android:lines="7"
                 android:fontFamily="times"
                 android:justificationMode="inter_word"
+                android:lines="7"
+                android:onClickListener="@{() -> handler.onItemSelected(viewModel)}"
                 android:text="@{viewModel.Content}"
                 android:textColor="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"

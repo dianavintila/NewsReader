@@ -74,6 +74,7 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/news_paper"
                 app:newsList="@{viewModel.newsList}"
+                app:articleHandler="@{viewModel}"
                 tools:listitem="@layout/news_item" />
 
 

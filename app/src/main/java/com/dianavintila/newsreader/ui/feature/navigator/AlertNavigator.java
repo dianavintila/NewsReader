@@ -1,10 +1,6 @@
 package com.dianavintila.newsreader.ui.feature.navigator;
-
 import android.content.Context;
-
 import androidx.appcompat.app.AlertDialog;
-import androidx.fragment.app.FragmentManager;
-
 import com.dianavintila.data.remote.exception.ApiException;
 import com.dianavintila.data.remote.exception.ConnectivityException;
 import com.dianavintila.newsreader.R;

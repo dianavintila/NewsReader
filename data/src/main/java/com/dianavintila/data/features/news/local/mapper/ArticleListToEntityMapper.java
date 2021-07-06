@@ -10,7 +10,7 @@ public class ArticleListToEntityMapper implements Function<List<Article>, List<A
 
     private final static String DEFAULT_TITLE = "Default title";
     private final static String DEFAULT_CONTENT = "Default content";
-    private final static String DEFAULT_URL = "https://i.stack.imgur.com/sg5qJ.png";
+    private final static String DEFAULT_URL = "https://i.pinimg.com/736x/7c/1c/a4/7c1ca448be31c489fb66214ea3ae6deb.jpg";
 
     @Override
     public List<ArticleEntity> apply(List<Article> articles) {

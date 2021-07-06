@@ -1,4 +1,6 @@
 package com.dianavintila.newsreader.ui.feature.model;
+import android.view.View;
+
 import androidx.annotation.Nullable;
 
 
@@ -14,4 +16,6 @@ public class ArticleItemViewModel {
         this.Content = content;
         this.URLImage = imageURL;
     }
+
+
 }

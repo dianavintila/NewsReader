@@ -32,7 +32,7 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ArticleI
     public void onBindViewHolder(@NonNull @NotNull ArticleItemViewHolder holder, int position) {
 
         holder.binding.setViewModel(articleModeList.get(position));
-
+        holder.binding.setHandler(handler);
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(holder.itemView.getContext(), NewsItemDetailsActivity.class);
             NewsItemDetailsActivity.TITLE = articleModeList.get(position).Title;
@@ -44,8 +44,6 @@ public class ArticleAdapter extends RecyclerView.Adapter<ArticleAdapter.ArticleI
 
             holder.itemView.getContext().startActivity(intent);
         });
-
-        holder.binding.setHandler(handler);
 
     }
 
